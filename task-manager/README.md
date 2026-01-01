@@ -30,6 +30,7 @@ task-manager/
 - **Containerization**: Docker & Docker Compose
 - **Web Server**: Nginx
 
+
 ## Running with Docker
 
 1. Make sure Docker and Docker Compose are installed
@@ -68,3 +69,13 @@ python -m http.server 8080
 - ✅ Persistent storage with SQLite
 - ✅ RESTful API design
 - ✅ Containerized deployment
+
+
+## Common Troubleshooting Issues - WIP
+
+### Port Issue Resolution
+
+When you first clone this repo into your own local environment, make sure that you modify two important files to change the ports from which you local task manager will run: 
+
+- `docker-compose.yml` - change both `frontend` and `backend` ports (first four digits) to something other than 8000 (e.g. 8002, 6756, etc)
+- `app.js` - change the API_URL to match the backend port you set
